@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halloween | Historia</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .historia-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .historia-texto {
+      flex: 2;
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .historia-imagen {
+      flex: 1;
+      text-align: center;
+    }
+    .historia-imagen img {
+      max-width: 100%;
+      border: 5px solid #ff6600;
+      border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .historia-container {
+        flex-direction: column;
+      }
+      .historia-imagen {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="encabezado">
+    <h1>Historia y Origen de Halloween</h1>
+  </div>
+
+  <div id="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="historia.html">Historia</a></li>
+      <li><a href="personajes.html">Personajes</a></li>
+      <li><a href="tradiciones.html">Tradiciones</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="musica.html">Música</a></li>
+      <li><a href="juegos.html">Juegos</a></li>
+      <li><a href="curiosidades.html">Curiosidades</a></li>
+      <li><a href="registro.html">Registro</a></li>
+    </ul>
+  </div>
+
+  <div id="contenido-principal">
+    <div class="historia-container">
+      <div class="historia-texto">
+        <h2>Los orígenes: Samhain y más de 3.000 años</h2>
+        <p>Halloween tiene raíces en el festival celta <strong>Samhain</strong>, celebrado hace más de 3.000 años. Marcaba el fin de la cosecha y el inicio del invierno, una época donde se creía que los espíritus podían visitar el mundo de los vivos.</p>
+
+        <h2>Mitos y leyendas</h2>
+        <p>Los celtas encendían hogueras para protegerse de espíritus malignos y usaban máscaras para confundir a las entidades sobrenaturales. Estas costumbres dieron origen a los disfraces modernos.</p>
+
+        <h2>Influencia cristiana</h2>
+        <p>La iglesia transformó la festividad en la víspera del Día de Todos los Santos (All Hallows’ Eve), lo que dio origen al término <em>Halloween</em>. Con el tiempo, se mezclaron las prácticas paganas con las religiosas.</p>
+
+        <h2>Evolución moderna</h2>
+        <p>Con la migración irlandesa a Estados Unidos en el siglo XIX, la tradición se expandió y adoptó símbolos como las calabazas talladas. Hoy en día, Halloween es una celebración global llena de misterio, cultura y diversión.</p>
+      </div>
+
+      <div class="historia-imagen">
+        <img src="https://static.nationalgeographicla.com/files/styles/image_3200/public/72905.adapt_.768.1.jpg?w=1600&h=1092" alt="Historia real de Halloween">
+      </div>
+    </div>
+  </div>
+
+  <div id="piede-pagina">
+    <p>© 2025 Sitio Web de Halloween | Proyecto Académico</p>
+  </div>
+</body>
+</html>

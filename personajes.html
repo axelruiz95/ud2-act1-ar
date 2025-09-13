@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halloween | Personajes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .personaje-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    .personaje-texto {
+      flex: 2;
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .personaje-imagen {
+      flex: 1;
+      text-align: center;
+    }
+    .personaje-imagen img {
+      max-width: 100%;
+      border: 4px solid #ff6600;
+      border-radius: 8px;
+    }
+    .invertido {
+      flex-direction: row-reverse;
+    }
+    @media (max-width: 768px) {
+      .personaje-container,
+      .personaje-container.invertido {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="encabezado">
+    <h1>Personajes Clásicos de Halloween</h1>
+  </div>
+
+  <div id="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="historia.html">Historia</a></li>
+      <li><a href="personajes.html">Personajes</a></li>
+      <li><a href="tradiciones.html">Tradiciones</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="musica.html">Música</a></li>
+      <li><a href="juegos.html">Juegos</a></li>
+      <li><a href="curiosidades.html">Curiosidades</a></li>
+      <li><a href="registro.html">Registro</a></li>
+    </ul>
+  </div>
+
+  <div id="contenido-principal">
+    <div class="personaje-container">
+      <div class="personaje-texto">
+        <h2>Las Brujas</h2>
+        <p>Las brujas son uno de los símbolos más antiguos de Halloween. Representan el poder de lo oculto, la magia y la conexión con lo sobrenatural. En la Edad Media eran temidas y perseguidas, y hoy forman parte esencial del imaginario popular de esta festividad.</p>
+      </div>
+      <div class="personaje-imagen">
+        <img src="https://guiauniversitaria.mx/wp-content/uploads/2022/10/20-datos-curiosos-sobre-las-brujas.jpg.webp" alt="Bruja de Halloween">
+      </div>
+    </div>
+
+    <div class="personaje-container invertido">
+      <div class="personaje-texto">
+        <h2>Los Vampiros</h2>
+        <p>Los vampiros simbolizan la oscuridad, la sed de poder y la inmortalidad. Inspirados en figuras legendarias como Drácula, estos seres de la noche son populares en fiestas y disfraces de Halloween, transmitiendo misterio y terror.</p>
+      </div>
+      <div class="personaje-imagen">
+        <img src="https://www.seresmitologicos.net/wp-content/uploads/2011/09/vampiro.jpg" alt="Vampiro clásico">
+      </div>
+    </div>
+
+    <div class="personaje-container">
+      <div class="personaje-texto">
+        <h2>Los Fantasmas</h2>
+        <p>Los fantasmas son las almas de los muertos que, según la tradición, regresan en la noche de Halloween para vagar entre los vivos. Su figura blanca y etérea ha inspirado historias, películas y leyendas en todas partes del mundo.</p>
+      </div>
+      <div class="personaje-imagen">
+        <img src="https://fotografias.larazon.es/clipping/cmsimages02/2021/05/26/CC3756DD-8C28-4058-9EC3-02F88902F08A/96.jpg?crop=1000,563,x0,y19&width=1200&height=675&optimize=low&format=webply" alt="Fantasma en Halloween">
+      </div>
+    </div>
+  </div>
+
+  <div id="piede-pagina">
+    <p>© 2025 Sitio Web de Halloween | Proyecto Académico</p>
+  </div>
+</body>
+</html>
