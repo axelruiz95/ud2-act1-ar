@@ -5,11 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Halloween | Tradiciones</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .tradicion-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    .tradicion-texto {
+      flex: 2;
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .tradicion-imagen {
+      flex: 1;
+      text-align: center;
+    }
+    .tradicion-imagen img {
+      max-width: 100%;
+      border: 4px solid #ff6600;
+      border-radius: 8px;
+    }
+    .invertido {
+      flex-direction: row-reverse;
+    }
+    @media (max-width: 768px) {
+      .tradicion-container,
+      .tradicion-container.invertido {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="encabezado">
     <h1>Tradiciones de Halloween</h1>
   </div>
+
   <div id="menu">
     <ul>
       <li><a href="index.html">Inicio</a></li>
@@ -18,18 +51,56 @@
       <li><a href="tradiciones.html">Tradiciones</a></li>
       <li><a href="galeria.html">Galería</a></li>
       <li><a href="videos.html">Videos</a></li>
-      <li><a href="musica.html">Música</a></li>
       <li><a href="juegos.html">Juegos</a></li>
       <li><a href="curiosidades.html">Curiosidades</a></li>
-      <li><a href="registro.html">Registro</a></li>
+      <li><a href="referencias.html">Referencias</a></li>
     </ul>
   </div>
+
   <div id="contenido-principal">
-    <h2>Costumbres populares</h2>
-    <p>Las principales tradiciones incluyen pedir dulces con el famoso “truco o trato”, disfrazarse con ropa terrorífica, decorar casas con calabazas y asistir a fiestas temáticas.</p>
+    <div class="tradicion-container">
+      <div class="tradicion-texto">
+        <h2>Dulce o Truco</h2>
+        <p>La tradición más famosa de Halloween es el <em>“trick or treat”</em> o “Dulce o truco”. Los niños se disfrazan y recorren las calles pidiendo dulces de casa en casa. Si los vecinos no entregan caramelos, los pequeños suelen realizar una pequeña broma o “truco”.</p>
+      </div>
+      <div class="tradicion-imagen">
+        <img src="https://billiken.lat/wp-content/uploads/2024/10/dt-18-1-768x581.jpg" alt="Niños pidiendo dulces en Halloween">
+      </div>
+    </div>
+
+    <div class="tradicion-container invertido">
+      <div class="tradicion-texto">
+        <h2>Tallado de Calabazas</h2>
+        <p>Las famosas calabazas iluminadas, llamadas <strong>Jack-o’-lantern</strong>, provienen de una leyenda irlandesa. Originalmente se tallaban nabos, pero en Estados Unidos se reemplazaron por calabazas, más grandes y fáciles de trabajar. Hoy son un ícono indispensable de la festividad.</p>
+      </div>
+      <div class="tradicion-imagen">
+        <img src="https://gastronomadas.com.mx/wp-content/uploads/2021/08/tallar-14.png" alt="Calabazas de Halloween">
+      </div>
+    </div>
+
+    <div class="tradicion-container">
+      <div class="tradicion-texto">
+        <h2>Disfraces y Fiestas</h2>
+        <p>Los disfraces representan la conexión con las máscaras celtas que ahuyentaban a los espíritus. Hoy en día, las fiestas de disfraces son parte fundamental de Halloween, con temáticas que van desde lo terrorífico hasta lo humorístico.</p>
+      </div>
+      <div class="tradicion-imagen">
+        <img src="https://lafrikileria.com/blog/wp-content/uploads/2023/10/disfraces-halloween-868x506.jpg" alt="Fiesta de disfraces en Halloween">
+      </div>
+    </div>
+
+    <div class="tradicion-container invertido">
+      <div class="tradicion-texto">
+        <h2>Casas Embrujadas</h2>
+        <p>Las casas embrujadas recrean escenarios de terror donde los visitantes experimentan la emoción de enfrentarse a fantasmas, monstruos y personajes aterradores. Se han convertido en una de las atracciones más populares durante esta temporada.</p>
+      </div>
+      <div class="tradicion-imagen">
+        <img src="https://img.maspormas.com/2017/06/La-moira.jpg" alt="Casa embrujada en Halloween">
+      </div>
+    </div>
   </div>
+
   <div id="piede-pagina">
-    <p>© 2025 Sitio Web de Halloween</p>
+    <p>© 2025 Sitio Web de Halloween | Proyecto Académico</p>
   </div>
 </body>
 </html>
