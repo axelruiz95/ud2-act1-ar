@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halloween | Formulario de Visitas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="encabezado">
+    <h1>Registro de Visitantes</h1>
+  </div>
+
+  <div id="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="historia.html">Historia</a></li>
+      <li><a href="personajes.html">Personajes</a></li>
+      <li><a href="tradiciones.html">Tradiciones</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="musica.html">Música</a></li>
+      <li><a href="juegos.html">Juegos</a></li>
+      <li><a href="curiosidades.html">Curiosidades</a></li>
+      <li><a href="formulario.html">Formulario</a></li>
+    </ul>
+  </div>
+
+  <div id="contenido-principal">
+    <h2>Formulario de visitantes</h2>
+    <form id="formVisitas" onsubmit="return validarFormulario()">
+      <label for="nombre">Nombre completo:</label><br>
+      <input type="text" id="nombre" name="nombre"><br><br>
+
+      <label>Sexo:</label><br>
+      <input type="radio" name="sexo" value="masculino"> Masculino
+      <input type="radio" name="sexo" value="femenino"> Femenino<br><br>
+
+      <label for="telefono">Teléfono:</label><br>
+      <input type="text" id="telefono" name="telefono"><br><br>
+
+      <label for="cp">Código Postal:</label><br>
+      <input type="text" id="cp" name="cp"><br><br>
+
+      <label for="correo">Correo electrónico:</label><br>
+      <input type="text" id="correo" name="correo"><br><br>
+
+      <label for="comentario">Comentario:</label><br>
+      <textarea id="comentario" name="comentario"></textarea><br><br>
+
+      <input type="checkbox" id="condiciones" name="condiciones">
+      <label for="condiciones">He leído las condiciones de uso</label><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div id="piede-pagina">
+    <p>© 2025 Sitio Web de Halloween | Proyecto Académico</p>
+  </div>
+
+  <script>
+    function validarFormulario() {
+      let errores = [];
+
+      const nombre = document.getElementById("nombre").value.trim();
+      if (nombre === "") errores.push("Nombre completo");
+
+
+      const sexo = document.querySelector('input[name="sexo"]:checked');
+      if (!sexo) errores.push("Sexo");
+
+      const telefono = document.getElementById("telefono").value.trim();
+      if (telefono === "" || isNaN(telefono)) errores.push("Teléfono (numérico)");
+
+      const cp = document.getElementById("cp").value.trim();
+      if (cp === "" || isNaN(cp)) errores.push("Código Postal (numérico)");
+
+      const correo = document.getElementById("correo").value.trim();
+      const regexCorreo = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (correo === "" || !regexCorreo.test(correo)) errores.push("Correo electrónico válido");
+
+      const comentario = document.getElementById("comentario").value.trim();
+      if (comentario === "") errores.push("Comentario");
+
+      const condiciones = document.getElementById("condiciones").checked;
+      if (!condiciones) errores.push("Aceptar condiciones de uso");
+
+      if (errores.length > 0) {
+        alert("Por favor revisa los siguientes campos:\n- " + errores.join("\n- "));
+        return false;
+      } else {
+        alert("¡Formulario enviado exitosamente!");
+        return true;
+      }
+    }
+  </script>
+</body>
+</html>
